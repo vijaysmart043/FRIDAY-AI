@@ -1,1 +1,1 @@
-api_data="AIzaSyAlTnPlA7ng33Iv_w4-2OxqjA4OAc_ke00"
+api_data = "YOUR_GEMINI_API_KEY"
