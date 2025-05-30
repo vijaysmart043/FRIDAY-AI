@@ -1,10 +1,10 @@
 
-import google.generativeai as genai 
-import pyttsx3 
-import speech_recognition as sr 
-import tkinter as tk 
+import google.generativeai as genai #pip install google-generativeai
+import pyttsx3 #pip install pyttsx3
+import speech_recognition as sr #pip install SpeechRecognition
+import tkinter as tk #pip install tk
 from tkinter import scrolledtext
-import threading 
+import threading #pip install thread
 from apikey import api_data
 
 
@@ -105,18 +105,57 @@ def end_conversation():
     root.quit()  # Close the application
 
 # Set up the GUI
+# Enhanced GUI setup
 root = tk.Tk()
-root.title("F-R-I-D-A-Y")
+root.title("F-R-I-D-A-Y: Voice Assistant")
+root.geometry("700x650")
+root.resizable(False, False)
+root.configure(bg="#1e1e1e")
 
-conversation_area = scrolledtext.ScrolledText(root, wrap=tk.WORD, width=50, height=20, font=("Arial", 12))
-conversation_area.pack(padx=10, pady=10)
+# Styling constants
+TEXT_COLOR = "#ffffff"
+BG_COLOR = "#1e1e1e"
+ENTRY_BG = "#2e2e2e"
+BTN_COLOR = "#3a3a3a"
+BTN_HOVER = "#4b4b4b"
+FONT = ("Segoe UI", 12)
+TITLE_FONT = ("Segoe UI", 18, "bold")
 
-# Start button
-start_button = tk.Button(root, text="Start Conversation", font=("Arial", 12), command=start_conversation)
-start_button.pack(pady=5)
+# Title Label
+title_label = tk.Label(
+    root, text="F-R-I-D-A-Y (Voice Assistant)", font=TITLE_FONT,
+    fg="#00ffd5", bg=BG_COLOR, pady=10
+)
+title_label.pack()
 
-# End button
-end_button = tk.Button(root, text="End Conversation", font=("Arial", 12), command=end_conversation)
-end_button.pack(pady=5)
+# Conversation Area
+conversation_area = scrolledtext.ScrolledText(
+    root, wrap=tk.WORD, width=70, height=20,
+    font=FONT, bg=ENTRY_BG, fg=TEXT_COLOR, insertbackground=TEXT_COLOR
+)
+conversation_area.pack(padx=20, pady=15)
+conversation_area.config(state='normal')
+
+# Button Frame
+button_frame = tk.Frame(root, bg=BG_COLOR)
+button_frame.pack(pady=10)
+
+# Custom button style
+def style_button(btn):
+    btn.configure(
+        bg=BTN_COLOR, fg=TEXT_COLOR, font=FONT,
+        activebackground=BTN_HOVER, activeforeground="#00ffd5",
+        padx=20, pady=10, bd=0, relief=tk.FLAT, cursor="hand2"
+    )
+
+# Start Button
+start_button = tk.Button(button_frame, text="🎙 Start Conversation", command=start_conversation)
+style_button(start_button)
+start_button.grid(row=0, column=0, padx=15)
+
+# End Button
+end_button = tk.Button(button_frame, text="⛔ End Conversation", command=end_conversation)
+style_button(end_button)
+end_button.grid(row=0, column=1, padx=15)
 
 root.mainloop()
