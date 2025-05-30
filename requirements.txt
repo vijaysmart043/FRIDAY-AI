@@ -1,0 +1,10 @@
+## 🛠️ Requirements
+
+Install the required packages before running the assistant:
+
+```bash
+pip install google-generativeai
+pip install pyttsx3
+pip install SpeechRecognition
+pip install pipwin
+pipwin install pyaudio  # For microphone input
