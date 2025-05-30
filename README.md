@@ -34,6 +34,4 @@ FRIDAY-AI/
 
 ├── LICENSE                   # MIT License
 
-
 Query:- Vsmart996@gmail.com
-        #GANTA VIJAY RAJ
