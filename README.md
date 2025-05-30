@@ -15,15 +15,4 @@
 - 🖥️ **GUI Interface**: Simple chat interface powered by Tkinter with start/stop buttons.
 
 ---
-FRIDAY-AI/
-│
-├── FRIDAY.py                 # Main Python script (your assistant code)
-├── apikey.py                 # Contains your Gemini API key
-├── README.md                 # Project overview, setup, and usage
-├── requirements.txt          # All Python dependencies
-├── .gitignore                # Files/folders Git should ignore
-├── assets/                   # (Optional) Images or icons for the assistant
-│   └── screenshot.png        # GUI or app screenshots
-├── LICENSE                   # (Optional) MIT License
-└── docs/                     # (Optional) Detailed docs or diagrams
-    └── architecture.md       # Architecture or flowchart documentation
+
