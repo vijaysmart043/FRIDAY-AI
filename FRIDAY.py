@@ -1,10 +1,10 @@
 
-import google.generativeai as genai #pip install google-generativeai
-import pyttsx3 #pip install pyttsx3
-import speech_recognition as sr #pip install SpeechRecognition
-import tkinter as tk #pip install tk
+import google.generativeai as genai 
+import pyttsx3 
+import speech_recognition as sr 
+import tkinter as tk 
 from tkinter import scrolledtext
-import threading #pip install thread
+import threading 
 from apikey import api_data
 
 
