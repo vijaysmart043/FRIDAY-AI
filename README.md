@@ -32,7 +32,5 @@ FRIDAY-AI/
 
 │   └── screenshot.png        # GUI or app screenshots
 
-├── LICENSE                   # (Optional) MIT License
+├── LICENSE                   # MIT License
 
-└── docs/                     # (Optional) Detailed docs or diagrams
-    └── architecture.md       # Architecture or flowchart documentation
